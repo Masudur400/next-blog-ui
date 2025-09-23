@@ -8,6 +8,10 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
     );
   }
 
+  const fallbackImg ="https://ik.imagekit.io/masudur/light.webp?updatedAt=1727611510420";
+    
+
+
   return (
     <main className="max-w-4xl mx-auto py-30 px-4">
       <h1 className="text-5xl font-bold mb-6">{blog?.title}</h1>
@@ -39,7 +43,7 @@ export default async function BlogDetailsCard({ blog }: { blog: any }) {
       {blog.thumbnail && (
         <div className="relative h-80 w-full overflow-hidden">
           <Image
-            src={blog.thumbnail}
+            src={fallbackImg}
             alt={blog.title}
             fill
             className="rounded-lg object-cover shadow-md"
